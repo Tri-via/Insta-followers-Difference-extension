@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Assist InsTa",
+  "version": "0.1",
+
+  "action": {
+    "default_icon": "images/Instagram-Icon.png",
+    "default_popup": "html/popup.html",
+    "default_title": "Instagram"
+  },
+
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+
+  "host_permissions": ["http://*/*", "https://*/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
